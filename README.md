@@ -1,6 +1,8 @@
 # 🌴 Normadize - Tropical Resort Landing Page
 
-![Project Screenshot](./assets/body.png) <!-- Replace with actual screenshot -->
+![Screenshot 2025-04-29 143458](https://github.com/user-attachments/assets/fd01c98a-ea44-417c-a0ac-1d1145ee0560)![Screenshot 2025-04-29 143450](https://github.com/user-attachments/assets/cb555313-66ff-4e48-a444-aad44327a770)
+
+
 
 A stunning, responsive landing page for a luxury tropical resort with smooth animations and modern UI elements.
 
