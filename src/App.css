@@ -1,0 +1,200 @@
+/* Header component styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.app-container {
+    position: relative;
+}
+
+
+.app-header {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+/* Refer in aheader.jsx this ".app-header.scrolled is how you apply it"*/
+.app-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.99); 
+}
+
+
+.main-content {
+    position: relative;
+}
+
+
+.image-container {
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 120vh;
+    z-index: 1;
+}
+.full-screen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-fit: cover;
+}
+
+
+.text-overlay {
+    position: absolute;
+    top: 60%;
+    left: 3%; 
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    width: 50%; 
+    max-width: 600px; 
+    box-sizing: border-box; 
+    padding-right: 10px; ;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.text-overlay p {
+    font-family: 'Playfair Display', serif; 
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 800; 
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    background: transparent;
+    border-radius: 8px;
+  }
+  .book-now-button {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    pointer-events: auto;
+    transform: scale(1); 
+}
+.book-now-button:hover {
+  transform: scale(1.15) translateY(-5px);
+  background: linear-gradient(to right, #ffffff, #f8f8f8);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.book-now-text {
+  transition: transform 0.1ms ease-in-out;
+  display: inline-block; 
+}
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.book-now-button:hover .arrow-icon {
+  transform: translatex(6px) rotate(320deg); /* Rotate the arrow icon */
+    background: linear-gradient(45deg, #000000, #333333);
+}
+.book-now-button:hover .book-now-text {
+  transform: scale(1.05);
+}
+.content-section{
+    background: transparent;
+    padding-top: 100vh;
+}
+.scrollable-content {
+    position: relative;
+    background: transparent;
+    color: white; 
+    padding: rem;
+    margin-top: -17vh; 
+    z-index: 1;
+  }
+.social-icons {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; 
+  height: 44px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: transparent;
+  color: white;
+  transform: scale(1);
+  will-change: transform; 
+}
+
+
+.social-link.facebook:hover {
+  transform: scale(1.2);
+  background-color: #1877F2; 
+  border-color: #1877F2;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.6);
+}
+
+
+.social-link.instagram:hover {
+  transform: scale(1.2);
+  border: 2px solid transparent;
+  background: 
+      linear-gradient(transparent, transparent) padding-box,
+      linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) border-box;
+  box-shadow: 0 0 15px rgba(188, 24, 136, 0.4);
+}
+
+.social-link.twitter:hover {
+  transform: scale(1.2);
+  background-color: #1DA1F2; 
+  border-color: #1DA1F2;
+  box-shadow: 0 0 15px rgba(29, 161, 242, 0.6);
+}
+
+
+.social-link .anticon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .anticon {
+  transform: scale(1.1);
+}

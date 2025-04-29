@@ -1,0 +1,234 @@
+/* Header container with transition */
+.App-header {
+    position:fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.9);  /* Default transparent background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;  /* Smooth transition for background color and text */
+    padding: 1rem 2rem;  /* Padding for header */
+}
+
+/* Logo styling */
+.logo h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;  /* Default color before scroll */
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;  /* Transition color smoothly */
+    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
+}
+.app-header.scrolled .logo h1 {
+    color: #2c3e50;  /* Change logo color to dark blue when scrolled */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);  /* Add a subtle shadow effect */
+}
+
+/* Navigation link styles */
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    width: 40%;
+    justify-content: flex-start;  /* Align to the right */
+    padding-top: 0;
+    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
+}
+.nav a {
+    color: white;  /* Default color (dark blue) */
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease;  /* Smooth color transition */
+    justify-content: right;
+    align-items: right;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* When scrolled, change nav link color to white */
+.app-header.scrolled .nav a {
+    color:#2c3e50;  /* Change nav links color to white */
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Almost white transparent */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+}
+
+
+/* Change search bar background to white when scrolled */
+.App-header.scrolled .search-bar {
+    background-color: rgba(255, 255, 255, 0.9); /* Almost white transparent */
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1rem;
+    color: #2c3e50; /* Dark blue text */
+}
+.search-bar input::placeholder {
+    color: #7f8c8d; /* Gray placeholder text */
+}
+.search-button{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1); /* Almost white transparent */
+    border: 2px  rgba(255, 255, 255, 0.1); /* Almost white transparent */
+    border-radius: 50%;
+    padding: 0.5rem 0.6rem;
+    cursor: pointer;  /* Pointer cursor on hover */
+    font-size: -1rem;
+    font-weight: 500;
+    transition: border 0.2s ease ease-in-out;  /* Smooth background color transition */
+}
+.search-button:hover{
+    border: 1px #3498db solid; /* Change border color on hover */
+}
+.search-icon{
+    color: #3498db;
+}
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    cursor: pointer;  /* Pointer cursor on hover */
+    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
+}
+/* Auth links container */
+.auth-links {
+    display: flex;
+    gap: -1rem;
+    align-items: center;
+    width: 20%;
+    position: relative;
+    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
+}
+
+/* Auth link styles */
+.auth-link{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: color 0.3s ease;  
+    position: relative;
+    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
+}
+.auth-link:hover::after {
+    width: 100%;
+}
+.auth-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: all 0.3s ease;
+    cursor: pointer;  /* Pointer cursor on hover */
+}
+
+.auth-link.signup::after {
+    display: none; /* Disable the underline effect for the signup button */
+}
+
+.auth-link.login {
+    color: white;  /* Default color (white) */
+    transition: color 0.3s ease;  /* Smooth color transition */
+}
+.auth-link.login::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+  
+}
+.auth-link.login:hover::after {
+    width: 100%;
+}
+.app-header.scrolled .auth-link.login {
+    color: #2c3e50;  /* Change login button color to dark blue when scrolled */
+}
+
+.auth-link.signup {
+    background-color: #3498db;
+    color: white;
+    border: 2px solid #3498db;
+    position: relative;
+    justify-content: left;
+}
+.auth-link.signup:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.app-header.scrolled.auth-link.signup{
+    color: white; 
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .App-header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .left-section {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;  /* Allow wrapping for smaller screens */
+        flex-direction: column;  /* Stack nav items vertically */
+    }
+
+    .auth-links {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Add padding to body to prevent content from hiding under fixed header */
+body {
+    padding-top: 80px;
+}
