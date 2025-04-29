@@ -26,5 +26,22 @@ A stunning, responsive landing page for a luxury tropical resort with smooth ani
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/normadize.git
+   git clone https://github.com/Michael99-alt/normadize.git
    cd normadize
+## Install dependencies
+npm install
+## Run the development server
+npm run dev
+## Open in browser
+http://localhost:3000
+## 📂 Project Structure
+src/
+├── components/
+│   ├── Header/          # Dynamic scroll-responsive header
+│   │   ├── Header.jsx
+│   │   └── Header.css
+├── App.jsx             # Main application component
+├── App.css             # Global styles
+└── assets/             # Image resources
+## 📜 License
+Distributed under the MIT License. See LICENSE for more information.
