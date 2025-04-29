@@ -1,72 +1,28 @@
-Normadize - Tropical Resort Landing Page
-Project Preview <!-- Replace with an actual screenshot of your project -->
+# 🌴 Normadize - Tropical Resort Landing Page
 
-Overview
-Normadize is a modern, responsive landing page for a tropical resort, featuring a stunning full-screen hero image, interactive social media icons, and a dynamic header that changes on scroll.
+![Project Screenshot](./assets/body.png) <!-- Replace with actual screenshot -->
 
-Features
-Dynamic Header: Transparent header that becomes opaque on scroll with smooth transitions
+A stunning, responsive landing page for a luxury tropical resort with smooth animations and modern UI elements.
 
-Full-screen Hero Image: Beautiful tropical resort imagery with overlay text
+## ✨ Features
 
-Interactive Elements:
+| Feature | Description |
+|---------|-------------|
+| **Dynamic Header** | Transparent header that elegantly transforms on scroll |
+| **Immersive Hero Section** | Full-screen tropical imagery with overlay text |
+| **Interactive UI** | Animated buttons and social icons with platform-specific effects |
+| **Responsive Design** | Optimized for all device sizes |
+| **Performance Optimized** | Smooth animations with efficient rendering |
 
-"Book Now" button with hover animations
+## 🛠️ Technologies
 
-Social media icons with platform-specific hover effects
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Ant Design](https://img.shields.io/badge/Ant%20Design-1890FF?style=for-the-badge&logo=antdesign&logoColor=white)
 
-Responsive Design: Adapts to various screen sizes
+## 🚀 Quick Start
 
-Smooth Scrolling Effects: Elegant transitions between sections
-
-Technologies Used
-React.js
-
-CSS3 (with modern features like clamp() and custom cubic-bezier transitions)
-
-Ant Design Icons
-
-Vite (or Create React App - adjust based on your actual setup)
-
-Installation
-Clone the repository:
-
-bash
-git clone https://github.com/your-username/normadize.git
-Install dependencies:
-
-bash
-npm install
-Run the development server:
-
-bash
-npm run dev
-Project Structure
-normadize/
-├── src/
-│   ├── components/
-│   │   ├── Header.jsx
-│   │   └── Header.css
-│   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
-│   └── assets/
-│       └── body.png
-├── public/
-├── package.json
-└── README.md
-Customization
-To customize this project:
-
-Replace body.png in the assets folder with your own hero image
-
-Adjust colors in the CSS files to match your brand
-
-Modify the text content in App.jsx and Header.jsx
-
-Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements.
-
-License
-This project is licensed under the MIT License.
-
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/normadize.git
+   cd normadize
