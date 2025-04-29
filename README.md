@@ -1,20 +1,44 @@
 # 🌴 Normadize - Tropical Resort Landing Page
 
 ![Screenshot 2025-04-29 143458](https://github.com/user-attachments/assets/fd01c98a-ea44-417c-a0ac-1d1145ee0560)![Screenshot 2025-04-29 143450](https://github.com/user-attachments/assets/cb555313-66ff-4e48-a444-aad44327a770)
-
-
-
-A stunning, responsive landing page for a luxury tropical resort with smooth animations and modern UI elements.
-
+A luxurious tropical resort landing page with elegant animations and responsive design.
 ## ✨ Features
 
 | Feature | Description |
 |---------|-------------|
 | **Dynamic Header** | Transparent header that elegantly transforms on scroll |
-| **Immersive Hero Section** | Full-screen tropical imagery with overlay text |
+| **Clean navigation**| Neat navigation bar with hover effects
 | **Interactive UI** | Animated buttons and social icons with platform-specific effects |
 | **Responsive Design** | Optimized for all device sizes |
 | **Performance Optimized** | Smooth animations with efficient rendering |
+
+## 🌊 Dynamic Scroll Effects
+Smooth UI transformations triggered by scroll position
+// In Header.jsx
+const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 50); // Activates after 50px scroll
+  };
+  
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+## Visual Transformations
+When scrolled (isScrolled = true), these elements transform:
+
+Element	Change	CSS Snippet
+Header Background	Transparent → Opaque white	background: rgba(255,255,255,0.98);
+Navigation Links	White → Deep blue	color: #2c3e50;
+Search Box	Light overlay → Solid white	background: white;
+Sign-Up Button	Flat → Subtle shadow	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+Logo Text	Light → Dark	color: #2c3e50;
+
+This provides a:
+-Seamless UX: Maintains visibility while feeling lightweight
+-Easy to Extend: Add more effects by expanding the .scrolled class
 
 ## 🛠️ Technologies
 
